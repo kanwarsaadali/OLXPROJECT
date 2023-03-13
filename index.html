@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+<!-- 
+      <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+      <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyCQw_fs7kp6b4bXc3H0_wN6cGRpulLQV3g",
+        authDomain: "my-first-instagram-clone.firebaseapp.com",
+        projectId: "my-first-instagram-clone",
+        storageBucket: "my-first-instagram-clone.appspot.com",
+        messagingSenderId: "945481756060",
+        appId: "1:945481756060:web:f11b16bf2143d617c46c59",
+        measurementId: "G-CV8VJZGKBH",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig); -->
+    </script>
+  </head>
+  <body>
+    <form class="box">
+      <h1>SignUP</h1>
+      <input type="text" name="" placeholder="Username" id="name" />
+      <input type="email" name="" placeholder="email" id="email" />
+      <input type="password" name="" placeholder="Password" id="pass" />
+      <button
+        type="button"
+        style="border: 2px solid white; border-radius: 25px"
+        onclick="signup()"
+        class="control btn btn-primary"
+      >
+        Sign Up
+      </button>
+    </form>
+
+    <script>
+      function signup() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var pass = document.getElementById("pass").value;
+
+        localStorage.setItem("name1", name);
+        localStorage.setItem("email1", email);
+        localStorage.setItem("pass1", pass);
+        window.location.href = "signin.html";
+      }
+    </script>
+
+    <style>
+      body {
+        color: white;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: #34495e;
+      }
+      .box {
+        width: 300px;
+        padding: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #191919;
+        text-align: center;
+        border-radius: 50px;
+      }
+      .box h1 {
+        color: white;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      .box input[type="text"],
+      .box input[type="password"],
+      .box input[type="email"] {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #3498db;
+        padding: 14px 10px;
+        width: 200px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+      }
+      .box input[type="text"]:focus,
+      .box input[type="password"]:focus,
+      .box input[type="email"] {
+        width: 280px;
+        border-color: #2ecc71;
+      }
+    </style>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"
+  ></script>
+</html>
